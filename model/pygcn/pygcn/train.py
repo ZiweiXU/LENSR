@@ -298,8 +298,8 @@ t_total = time.time()
 best_acc = 0.0
 for epoch in range(args.epochs):
 
-    test_stats = train_step(epoch, train_loss_save)
-     # = test()
+    _ = train_step(epoch, train_loss_save)
+    test_stats = test()
     test_loss_save['triplet_loss'].append(test_stats[0])
     test_loss_save['CE_loss'].append(test_stats[1])
     test_loss_save['acc'].append(test_stats[2])
