@@ -1,4 +1,8 @@
-## Required softwares
+# Embedding Symbolic Knowledge into Deep Networks
+
+This repository accompanies the paper "Embedding Symbolic Knowledge into Deep Networks" (NeurIPS 2019). 
+
+## Required libraries
 1. Install Anaconda from [https://www.anaconda.com/]
 2. Install all required python packages: `conda env create -f environment.yml`
 
