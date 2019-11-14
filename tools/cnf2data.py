@@ -121,7 +121,7 @@ if __name__ == "__main__":
         os.mkdir(directory_in_str_out)
 
     for file in tqdm(os.listdir(directory_in_str)):
-        if file.endswith(".nnf"):
+        if file.endswith(".cnf"):
             input_dire = os.path.join(directory_in_str, file)
             output_dire = [os.path.join(directory_in_str_out, file[:-4] + '.var'),
                            os.path.join(directory_in_str_out, file[:-4] + '.rel'),
