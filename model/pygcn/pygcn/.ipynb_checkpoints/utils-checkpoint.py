@@ -9,7 +9,7 @@ from torch.utils.data import Dataset
 
 def encode_onehot(labels):
     classes = set(labels)
-    classes_dict = {c: np.identity(len(classes))[i, :] for i, c in
+    classes_dict = {c: np.identity(max(classes)+1)[c, :] for i, c in
                     enumerate(classes)}
     labels_onehot = np.array(list(map(classes_dict.get, labels)),
                              dtype=np.int32)
@@ -196,7 +196,7 @@ class Mydataset(Dataset):
 
     def encode_onehot(self, labels):
         classes = set(labels)
-        classes_dict = {c: np.identity(len(classes))[i, :] for i, c in
+        classes_dict = {c: np.identity(max(classes)+1)[c, :] for i, c in
                         enumerate(classes)}
         labels_onehot = np.array(list(map(classes_dict.get, labels)),
                                  dtype=np.int32)
