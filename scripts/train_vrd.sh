@@ -48,14 +48,14 @@ non_reg_options="--w_reg 0.0"
 for dataset in ${dataset_options[@]}; do
     for atom in "${atom_options[@]}"; do
         if [[ "${atom}" == "" ]]; then
-            python train.py --ds_path ../../../dataset/Synthetic --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${non_reg_options} ${ind_options}
-            python train.py --ds_path ../../../dataset/Synthetic --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${non_reg_options}
+            python train.py --ds_path ../../../dataset/VRD --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${non_reg_options} ${ind_options}
+            python train.py --ds_path ../../../dataset/VRD --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${non_reg_options}
         fi
         if [[ ${atom} == '_ddnnf' ]]; then
-            python train.py --ds_path ../../../dataset/Synthetic --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${reg_options} ${ind_options} 
-            python train.py --ds_path ../../../dataset/Synthetic --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${reg_options}
-            python train.py --ds_path ../../../dataset/Synthetic --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${ind_options}
-            python train.py --ds_path ../../../dataset/Synthetic --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${non_reg_options}
+            python train.py --ds_path ../../../dataset/VRD --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${reg_options} ${ind_options} 
+            python train.py --ds_path ../../../dataset/VRD --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${reg_options}
+            python train.py --ds_path ../../../dataset/VRD --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${ind_options}
+            python train.py --ds_path ../../../dataset/VRD --dataset ${dataset}${atom} --epochs 15 --dataloader_worker 5 ${non_reg_options}
         fi
     done
 done
