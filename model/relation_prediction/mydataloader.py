@@ -25,7 +25,7 @@ class VRD_dataset(Dataset):
             key = pairs[i]
             relation = self.annotation_train[img][key]
 
-            if relation == 100:
+            if relation == 70:
                 if np.random.random() < 0.01 and (self.information[img][key][1][1] != self.information[img][key][2][1]):
                     x.append(self.image_features_train[img][key])
                     y.append(relation)
