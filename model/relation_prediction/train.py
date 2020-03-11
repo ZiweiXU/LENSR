@@ -273,7 +273,7 @@ def prediction_to_assignment_embedding(softmax_list, info_list, embedder, tokeni
         e_p = 0
         for pres_idx in range(0, 70):
             e_p += prop[pres_idx] * torch.cuda.FloatTensor(_feature(tokenizers['token2vocab'][pres_idx]))
-        e_p = e_p / 70
+        
         e_p = (e_p + torch.cuda.FloatTensor(_feature(sub)) + torch.cuda.FloatTensor(_feature(obj))) / 3
 
         embedded_clauses.append(e_p)
