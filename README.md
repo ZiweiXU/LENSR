@@ -3,7 +3,9 @@
 This repository accompanies the paper "Embedding Symbolic Knowledge into Deep Networks" (NeurIPS 2019). 
 
 To replicate the experiments in the paper, clone and run with the NeurIPS2019 state: 
+
 `git clone -b NeurIPS2019 github.com/ZiweiXU/LENSR .`
+
 We have modified the code since then. 
 
 ## Required libraries
